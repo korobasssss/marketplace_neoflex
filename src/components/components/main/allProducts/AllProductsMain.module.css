@@ -1,3 +1,11 @@
+.route {
+  max-width: 1135px;
+  display: grid;
+}
 
+.page {
+  display: grid;
+  justify-items: center;
+}
 
 /*# sourceMappingURL=AllProductsMain.module.css.map */
