@@ -5,7 +5,6 @@ export const AllProductsMain = (props: AllProductsInterfaceProps) => {
     return (
         <main>
             <Header/>
-
         </main>
     )
 }
