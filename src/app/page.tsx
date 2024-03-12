@@ -3,9 +3,10 @@
 import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom";
 import {AllProductsContainer} from "@/components/components/main/allProducts/AllProductsContainer";
 import {CartContainer} from "@/components/components/cart/cart/CartContainer";
+import page_scss from './page.module.scss'
 export default function Home() {
     return (
-        <main>
+        <main className={page_scss.route}>
             <Router>
                 <Routes>
                     <Route path={'/'} element={<AllProductsContainer/>}/>

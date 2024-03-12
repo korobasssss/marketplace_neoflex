@@ -1,11 +1,17 @@
-.route {
-  max-width: 1135px;
-  display: grid;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import "@/app/values";
+ *   |         ^^^^^^^^^^^^^^
+ *   '
+ *   AllProductsMain.module.scss 1:9  root stylesheet */
 
-.page {
-  display: grid;
-  justify-items: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"@/app/values\";\d\a   \2502          ^^^^^^^^^^^^^^\a   \2575 \a   AllProductsMain.module.scss 1:9  root stylesheet";
 }
-
-/*# sourceMappingURL=AllProductsMain.module.css.map */
