@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
 import {Montserrat} from "next/font/google";
-import ".//globals.scss";
+import "./scss/globals/globals.scss";
 import React from "react";
 import {Providers} from "@/app/Provider";
 

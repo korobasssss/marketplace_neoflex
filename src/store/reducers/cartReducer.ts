@@ -1,4 +1,5 @@
-import {OneProductInMain} from "@/components/interfaces/oneProductInMain";
+import {OneProductInMain} from "@/app/interfaces/oneProductInMain";
+
 
 const initialValue: { products: OneProductInMain[], countProducts: number } = {
     products: [],

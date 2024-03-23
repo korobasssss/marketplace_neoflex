@@ -1,4 +1,4 @@
-import {ContactsInterface} from "@/components/interfaces/footerInterface";
+import {ContactsInterface} from "@/app/interfaces/footerInterface";
 
 interface contactInterface {
     appName: string,
@@ -15,15 +15,15 @@ const initialValue: contactInterface = {
     rules: `Here is service's rules`,
     contactsArr: [
         {
-            img: '@/assets/icons/vk.svg',
+            img: '/assets/icons/vk.svg',
             link: 'https://vk.com/neoflex_ru'
         },
         {
-            img: '@/assets/icons/vk.svg',
+            img: '/assets/icons/telegram.svg',
             link: 'https://t.me/neoflexcareers'
         },
         {
-            img: '@/assets/icons/vk.svg',
+            img: '/assets/icons/whatsapp.svg',
             link: 'https://t.me/ddarumddarimdda'
         }
     ],
