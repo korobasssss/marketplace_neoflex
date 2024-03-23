@@ -1,0 +1,19 @@
+@import "@/app/scss/globals/color";
+
+.page {
+  display: flex;
+  justify-content: center;
+
+  background-color: $bgc;
+}
+
+.route {
+  padding: 0 10px;
+  max-width: 1135px;
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  justify-self: center;
+
+
+}

@@ -1,5 +1,9 @@
-const initialValue = {
+import {OneProductInMain} from "@/app/interfaces/oneProductInMain";
 
+
+const initialValue: { products: OneProductInMain[], countProducts: number } = {
+    products: [],
+    countProducts: 0
 }
 
 export const cartReducer = (state = initialValue, action: any) => {

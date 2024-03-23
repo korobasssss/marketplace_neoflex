@@ -1,7 +1,10 @@
-export default function Home() {
-    return (
-        <main>
+'use client'
 
-        </main>
-    );
+import { useRouter } from 'next/navigation'
+import {Path} from "@/app/path";
+
+export default function Home() {
+
+    const router = useRouter();
+    router.push(Path.PRODUCTS)
 }
