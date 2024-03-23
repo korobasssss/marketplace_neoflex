@@ -1,6 +1,7 @@
 @import "@/app/scss/globals/color";
 
 .page {
+
   display: flex;
   justify-content: center;
 
@@ -9,7 +10,7 @@
 
 .route {
   padding: 0 10px;
-  max-width: 1135px;
+  width: 1135px;
   display: flex;
   flex-flow: column;
   gap: 30px;

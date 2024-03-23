@@ -1,22 +1,16 @@
 import {AllProductsInterfaceProps} from "@/app/interfaces/allProductsInterface";
-import {HeaderContainer} from "@/app/components/main/header/HeaderContainer";
-import {OneProductInMain} from "@/app/interfaces/oneProductInMain";
-import {OneProductMain} from "@/app/components/allProducts/oneProductInMain/OneProductMain";
-import {FooterContainer} from "@/app/components/main/footer/FooterContainer";
+import {OneProductInterface} from "@/app/interfaces/oneProductInterface";
 
 import main_scss from '@/app/scss/components/main/AllProductsMain.module.scss'
+import {OneProductMainContainer} from "@/app/components/allProducts/oneProductInMain/OneProductMainContainer";
 
 export const AllProducts = (props: AllProductsInterfaceProps) => {
     return (
         <ul className={main_scss.products}>
-            {props.products.map((oneProduct: OneProductInMain) => {
+            {props.products.map((oneProduct: OneProductInterface) => {
                 return (
                     <li key={oneProduct.id}>
-                        <OneProductMain id={oneProduct.id}
-                                        img={oneProduct.img}
-                                        title={oneProduct.title}
-                                        price={oneProduct.price}
-                                        rate={oneProduct.rate}/>
+                        <OneProductMainContainer oneProduct={oneProduct}/>
                     </li>
                 )
             })}

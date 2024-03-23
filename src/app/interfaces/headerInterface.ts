@@ -2,8 +2,12 @@ export interface HeaderInterfaceState {
     contacts: {
         appName: string
     }
+    cart: {
+        countProducts: number
+    }
 }
 
 export interface HeaderInterfaceProps {
-    appName: string
+    appName: string,
+    countProductsInCart: number
 }
