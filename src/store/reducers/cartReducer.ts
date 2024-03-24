@@ -4,7 +4,7 @@ import {OneProductCartInterface} from "@/app/interfaces/CartInterface";
 const SET_PRODUCT = 'SET_PRODUCT'
 const DELETE_PRODUCT = 'DELETE_PRODUCT'
 
-const ADD_COUNT_PRODUCT = 'DELETE_PRODUCT'
+const ADD_COUNT_PRODUCT = 'ADD_COUNT_PRODUCT'
 const REMOVE_COUNT_PRODUCT = 'REMOVE_COUNT_PRODUCT'
 
 
@@ -30,8 +30,9 @@ export const cartReducer = (state = initialValue, action: any) => {
         case DELETE_PRODUCT: {
             for (let i = 0; i < stateCopy.products.length; i++) {
                 if (stateCopy.products[i].id === action.id) {
-                    stateCopy.products.splice(i, 1)
                     stateCopy.price = stateCopy.price - stateCopy.products[i].price * stateCopy.products[i].count
+
+                    stateCopy.products.splice(i, 1)
                 }
             }
             stateCopy.countProducts = stateCopy.countProducts - 1
@@ -43,6 +44,8 @@ export const cartReducer = (state = initialValue, action: any) => {
             for (let i = 0; i < stateCopy.products.length; i++) {
                 if (stateCopy.products[i].id === action.id) {
                     stateCopy.products[i].count = stateCopy.products[i].count + 1
+
+                    stateCopy.price = stateCopy.price + stateCopy.products[i].price
                 }
             }
 
@@ -53,6 +56,8 @@ export const cartReducer = (state = initialValue, action: any) => {
             for (let i = 0; i < stateCopy.products.length; i++) {
                 if (stateCopy.products[i].id === action.id && stateCopy.products[i].count > 1) {
                     stateCopy.products[i].count = stateCopy.products[i].count - 1
+
+                    stateCopy.price = stateCopy.price - stateCopy.products[i].price
                 }
             }
 

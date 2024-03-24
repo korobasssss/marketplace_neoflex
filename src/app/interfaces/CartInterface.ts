@@ -31,4 +31,8 @@ export interface OneProductInCartInterface {
 
 export interface OneProductInCartComponentInterface {
     oneProduct: OneProductCartInterface
+
+    setAddCountPressed(flag: boolean): void
+    setRemoveCountPressed(flag: boolean): void
+    setIsPressedRemoveFromCart(flag: boolean): void
 }

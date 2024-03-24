@@ -30,5 +30,8 @@ export const OneProductInCart = (props: OneProductInCartInterface) => {
     }, [isPressedRemoveFromCart]);
 
 
-    return <OneProductInCartComponent oneProduct={props.oneProduct}/>
+    return <OneProductInCartComponent oneProduct={props.oneProduct}
+                                      setAddCountPressed={setAddCountPressed}
+                                      setRemoveCountPressed={setRemoveCountPressed}
+                                      setIsPressedRemoveFromCart={setIsPressedRemoveFromCart}/>
 }

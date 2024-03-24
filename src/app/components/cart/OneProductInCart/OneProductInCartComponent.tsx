@@ -19,18 +19,18 @@ export const OneProductInCartComponent = (props: OneProductInCartComponentInterf
                     <div className={'name'}>{props.oneProduct.title}</div>
                     <div className={'no_important ' + one_product_scss.price}>{props.oneProduct.price} ₽</div>
                 </section>
-                <button className={one_product_scss.button}>
+                <button className={one_product_scss.button}  onClick={() => props.setIsPressedRemoveFromCart(true)}>
                     <Image src={delete_icon} alt={'delete product'} width={0} height={0}/>
                 </button>
             </section>
             <footer className={one_product_scss.footer}>
                 <section className={one_product_scss.plus_minus}>
-                    <button className={one_product_scss.button_plus_minus}>
+                    <button className={one_product_scss.button_plus_minus} onClick={() => props.setRemoveCountPressed(true)}>
                         <Image src={minus_icon} alt={'delete product'} width={0} height={0}/>
                     </button>
                     <div className={one_product_scss.count}>{props.oneProduct.count}</div>
-                    <button className={one_product_scss.button_plus_minus}>
-                        <Image src={plus_icon} alt={'delete product'} width={0} height={0}/>
+                    <button className={one_product_scss.button_plus_minus} onClick={() => props.setAddCountPressed(true)}>
+                        <Image src={plus_icon} alt={'add product'} width={0} height={0}/>
                     </button>
                 </section>
                 <div className={'no_important ' + one_product_scss.final_price}>
