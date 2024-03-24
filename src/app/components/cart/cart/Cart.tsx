@@ -17,15 +17,18 @@ export const Cart = (props: CartInterface) => {
                         )
                     })}
                 </ul>
-                <aside className={'round_section'}>
-                    <main>
-                        <div>ИТОГО</div>
-                        <div>₽ {props.price}</div>
-                    </main>
-                    <button>
-                        Перейти к оформлению
-                    </button>
+                <aside className={cart_scss.aside}>
+                    <section className={'round_section ' + cart_scss.results_section}>
+                        <main className={cart_scss.res_data}>
+                            <div className={cart_scss.res_word}>ИТОГО</div>
+                            <div>₽ {props.price}</div>
+                        </main>
+                        <button className={cart_scss.final_button}>
+                            Перейти к оформлению
+                        </button>
+                    </section>
                 </aside>
+
             </section>
 
         </section>
