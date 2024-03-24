@@ -15,14 +15,14 @@ export const OneProductMainComponent = (props: OneProductMainComponentInterface)
             </picture>
             <footer className={one_product_scss.info}>
                 <section className={one_product_scss.section}>
-                    <div className={one_product_scss.name}>{props.oneProduct.title}</div>
+                    <div className={'name'}>{props.oneProduct.title}</div>
                     <div className={one_product_scss.price}>{props.oneProduct.price} ₽</div>
                 </section>
                 <section className={one_product_scss.section}>
                     <section className={one_product_scss.rate_section}>
                         <Image src={rate_icon} className={one_product_scss.rate_icon} alt={'rate icon'}
                                width={0} height={0}/>
-                        <div className={one_product_scss.rate}>{props.oneProduct.rate}</div>
+                        <div className={'no_important'}>{props.oneProduct.rate}</div>
                     </section>
                     <button onClick={() => props.setIsPressedToCart(true)}>
                         {props.isInCartVisual ?

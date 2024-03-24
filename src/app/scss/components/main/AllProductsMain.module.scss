@@ -4,8 +4,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 25px;
-  column-gap: 25px;
+  row-gap: $products-gap;
+  column-gap: $products-gap;
 
   li {
     min-width: 350px;
