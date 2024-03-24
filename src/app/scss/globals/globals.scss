@@ -34,3 +34,24 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
+
+.round_section {
+  border-radius: 30px;
+  background-color: $bgc-one-product;
+
+  box-shadow: $shadow;
+
+  padding: $default-padding;
+}
+
+.name {
+  font-size: $product-title-size;
+  font-weight: $product-title-weight;
+}
+
+.no_important {
+  font-size: $no-important-size;
+  font-weight: $no-important-weight;
+
+  color: $no-important-color
+}

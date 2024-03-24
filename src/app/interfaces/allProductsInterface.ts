@@ -1,10 +1,10 @@
-import {OneProductInMain} from "@/app/interfaces/oneProductInMain";
+import {OneProductInterface} from "@/app/interfaces/oneProductInterface";
 
 export interface AllProductsInterfaceState {
     products: {
-        products: OneProductInMain[]
+        products: OneProductInterface[]
     }
 }
 export interface AllProductsInterfaceProps {
-    products: OneProductInMain[]
+    products: OneProductInterface[]
 }

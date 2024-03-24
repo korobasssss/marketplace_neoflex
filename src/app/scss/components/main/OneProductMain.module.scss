@@ -4,22 +4,9 @@
 $price-size: 1.06em;
 $price-weight: 600;
 
-$rate-size: 1.06em;
-$rate-weight: 600;
-
 .root {
-  height: 407px;
-
   display: grid;
   row-gap: 50px;
-
-  border-radius: 30px;
-  padding: $default-padding;
-
-  background-color: $bgc-one-product;
-
-  box-shadow: $shadow;
-
 
   .image_section {
     display: flex;
@@ -32,8 +19,6 @@ $rate-weight: 600;
   }
 
 
-
-
   .info {
     display: flex;
     flex-flow: column;
@@ -43,11 +28,6 @@ $rate-weight: 600;
   .section {
     display: flex;
     justify-content: space-between;
-  }
-
-  .name {
-    font-size: $product-title-size;
-    font-weight: $product-title-weight;
   }
 
   .price {
@@ -68,10 +48,4 @@ $rate-weight: 600;
     width: 23px;
   }
 
-  .rate {
-    font-size: $rate-size;
-    font-weight: $rate-weight;
-
-    color: $no-important-color;
-  }
 }

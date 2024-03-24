@@ -1,17 +1,20 @@
 @import "@/app/scss/globals/color";
 
 .page {
-  display: flex;
-  justify-content: center;
+
+  display: grid;
+  justify-items: center;
 
   background-color: $bgc;
 }
 
 .route {
   padding: 0 10px;
-  max-width: 1135px;
-  display: flex;
-  flex-flow: column;
+  width: 1135px;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content auto min-content;
   gap: 30px;
   justify-self: center;
 

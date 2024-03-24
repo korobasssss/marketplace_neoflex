@@ -4,7 +4,8 @@ import {Cart} from "@/app/components/cart/cart/Cart";
 
 const mapStateToProps = (state: CartInterfaceState) => {
     return {
-        products: state.cart.products
+        products: state.cart.products,
+        price: state.cart.price
     }
 }
 
