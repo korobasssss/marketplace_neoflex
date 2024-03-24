@@ -14,7 +14,9 @@ export const Header = (props: HeaderInterfaceProps) => {
 
     return (
         <header className={header_scss.route}>
-            <div className={'title'}>{props.appName}</div>
+            <button className={'title'}  onClick={() => router.push(Path.PRODUCTS)}>
+                {props.appName}
+            </button>
             <nav className={header_scss.nav}>
                 <button className={header_scss.nav_buttons}>
                     <Image src={favourites_icon} className={header_scss.icons} alt={'favourites button'}/>
