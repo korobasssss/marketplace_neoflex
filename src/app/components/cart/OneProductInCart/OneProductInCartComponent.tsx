@@ -4,11 +4,13 @@ import delete_icon from '@/assets/icons/delete.svg'
 import minus_icon from '@/assets/icons/minus.svg'
 import plus_icon from '@/assets/icons/plus.svg'
 
+import '@/app/scss/globals/globals.scss'
+
 export const OneProductInCartComponent = (props: OneProductInCartComponentInterface) => {
 
     return (
         <main>
-            <section>
+            <section className={'round_section'}>
                 <section>
                     <Image src={props.oneProduct.img} alt={'product'} width={0} height={0}/>
                     <section>

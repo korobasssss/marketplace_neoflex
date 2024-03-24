@@ -3,10 +3,12 @@ import Image from "next/image";
 import rate_icon from '@/assets/icons/rate.svg'
 import { OneProductMainComponentInterface } from "@/app/interfaces/oneProductInterface";
 
+import '@/app/scss/globals/globals.scss'
+
 export const OneProductMainComponent = (props: OneProductMainComponentInterface) => {
 
     return (
-        <main className={one_product_scss.root}>
+        <main className={one_product_scss.root + ' round_section'}>
             <picture className={one_product_scss.image_section}>
                 <Image src={props.oneProduct.img} className={one_product_scss.image} alt={'product'}
                        width={0} height={0}/>

@@ -34,3 +34,12 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
+
+.round_section {
+  border-radius: 30px;
+  background-color: $bgc-one-product;
+
+  box-shadow: $shadow;
+
+  padding: $default-padding;
+}

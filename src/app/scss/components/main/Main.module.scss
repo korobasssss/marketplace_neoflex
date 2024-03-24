@@ -11,8 +11,9 @@
 .route {
   padding: 0 10px;
   width: 1135px;
-  display: flex;
-  flex-flow: column;
+  min-height: 100vh;
+
+  display: grid;
   gap: 30px;
   justify-self: center;
 
