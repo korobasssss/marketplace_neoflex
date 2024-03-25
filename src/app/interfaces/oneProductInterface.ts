@@ -5,7 +5,8 @@ export interface OneProductInterface {
     img: string,
     title: string,
     price: number,
-    rate: number
+    rate: number,
+    category: string
 }
 
 export interface OneProductState {

@@ -4,7 +4,8 @@ export interface OneProductCartInterface {
     title: string,
     price: number,
     rate: number,
-    count: number
+    count: number,
+    category: string
 }
 
 export interface CartInterfaceState {

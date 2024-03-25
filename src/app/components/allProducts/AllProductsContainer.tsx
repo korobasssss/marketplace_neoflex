@@ -5,6 +5,7 @@ import {AllProducts} from "@/app/components/allProducts/AllProducts";
 const mapStateToProps = (state: AllProductsInterfaceState) => {
     return {
         products: state.products.products,
+        categories: state.products.categories
     }
 }
 

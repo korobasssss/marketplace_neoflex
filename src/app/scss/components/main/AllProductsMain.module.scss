@@ -1,5 +1,18 @@
 @import "@/app/scss/globals/values";
 
+$category-size: 1.25em;
+
+.category_section {
+  padding-bottom: $products-gap;;
+  display: flex;
+  flex-flow: column;
+  gap: $products-gap;
+
+  .category_name {
+    font-size: $category-size;
+  }
+}
+
 .products {
   width: 100%;
   display: grid;
