@@ -18,7 +18,7 @@ const initialValue: contactInterface = {
         },
         {
             name: 'Условия сервиса',
-            router: Path.TERMS_OF_SERVICE
+            router: 'https://yandex.ru/legal/market_termsofuse'
 
         },
         {
@@ -28,7 +28,7 @@ const initialValue: contactInterface = {
         },
         {
             name: 'Контакты',
-            router: Path.CONTACTS
+            router: 'tel:+1234567890'
         },
     ],
     contacts: 89005553535,

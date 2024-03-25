@@ -6,7 +6,6 @@ const mapStateToProps = (state: FooterInterfaceState) => {
     return {
         appName: state.contacts.appName,
         contacts: state.contacts.contacts,
-        rules: state.contacts.rules,
         contactsArr: state.contacts.contactsArr,
         pointsArr: state.contacts.pointsArr
     }

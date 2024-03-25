@@ -13,7 +13,6 @@ export interface FooterInterfaceState {
 export interface FooterInterfaceProps {
     appName: string
     contacts: number,
-    rules: string,
     contactsArr: ContactsInterface[]
     pointsArr: FooterVarious[]
 }
