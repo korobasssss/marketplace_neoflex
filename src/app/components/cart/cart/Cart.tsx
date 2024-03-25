@@ -4,12 +4,13 @@ import {OneProductInCartContainer} from "@/app/components/cart/OneProductInCart/
 import cart_scss from '@/app/scss/components/cart/Cart.module.scss'
 
 export const Cart = (props: CartInterface) => {
+
     return (
         <section className={cart_scss.root}>
             <header className={cart_scss.header}>Корзина</header>
             <section className={cart_scss.columns}>
                 <ul className={cart_scss.products}>
-                    {props.products.map((oneProduct: OneProductCartInterface) => {
+                    {props.productsCart.map((oneProduct: OneProductCartInterface) => {
                         return (
                             <li key={oneProduct.id}>
                                 <OneProductInCartContainer oneProduct={oneProduct}/>

@@ -10,6 +10,12 @@ $button-size-hover: 1.15em;
   display: grid;
   row-gap: 50px;
 
+  .likeIcon {
+    position: absolute;
+    display: flex;
+    justify-self: end;
+  }
+
   .image_section {
     display: flex;
     justify-content: center;

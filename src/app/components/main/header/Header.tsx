@@ -7,8 +7,10 @@ import {HeaderInterfaceProps} from "@/app/interfaces/headerInterface";
 
 import header_scss from '@/app/scss/components/main/Header.module.scss'
 import {Path} from "@/app/path";
+import {useRouter} from "next/navigation";
 
 export const Header = (props: HeaderInterfaceProps) => {
+    const router = useRouter()
 
     return (
         <header className={header_scss.route}>
@@ -16,19 +18,20 @@ export const Header = (props: HeaderInterfaceProps) => {
                 {props.appName}
             </a>
             <nav className={header_scss.nav}>
-                <a className={header_scss.nav_buttons} href={Path.FAVOURITES}>
+                <button className={header_scss.nav_buttons} onClick={() => router.push(Path.FAVOURITES)}>
                     <Image src={favourites_icon} className={header_scss.icons} alt={'favourites button'}/>
-                    <section className={header_scss.count}>
-                        1
-                    </section>
-                </a>
-                <a className={header_scss.nav_buttons} href={Path.CART}>
+                    {props.countProductsInFav> 0 ?
+                        <section className={header_scss.count}>
+                            {props.countProductsInFav}
+                        </section> : null}
+                </button>
+                <button className={header_scss.nav_buttons} onClick={() => router.push(Path.CART)}>
                     <Image src={cart_icon} className={header_scss.icons} alt={'cart button'}/>
                     {props.countProductsInCart > 0 ?
                         <section className={header_scss.count}>
                             {props.countProductsInCart}
                         </section> : null}
-                </a>
+                </button>
             </nav>
         </header>
     )

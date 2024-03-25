@@ -10,13 +10,13 @@ export interface OneProductCartInterface {
 
 export interface CartInterfaceState {
     cart: {
-        products: OneProductCartInterface[],
+        productsCart: OneProductCartInterface[],
         price: number
     }
 }
 
 export interface CartInterface {
-    products: OneProductCartInterface[]
+    productsCart: OneProductCartInterface[]
     price: number
 }
 

@@ -11,21 +11,30 @@ export interface OneProductInterface {
 
 export interface OneProductState {
     cart: {
-        products: OneProductCartInterface[]
+        productsCart: OneProductCartInterface[]
+    },
+    favourites: {
+        productsFav: OneProductCartInterface[]
     }
 }
 
 export interface OneProductMainInterface {
     oneProduct: OneProductInterface
     cartProducts: OneProductCartInterface[]
+    favProducts: OneProductCartInterface[]
 
     addProductToCart(product: OneProductInterface): void
     deleteProductToCart(id: number): void
+
+    addProductToFavourites(product: OneProductInterface): void
+    deleteProductFromFavourites(id: number): void
 }
 
 export interface OneProductMainComponentInterface {
     oneProduct: OneProductInterface
 
     isInCartVisual: boolean
+    isInFavVisual: boolean
     setIsPressedToCart(flag: boolean): void
+    setIsPressedToFav(flag: boolean): void
 }

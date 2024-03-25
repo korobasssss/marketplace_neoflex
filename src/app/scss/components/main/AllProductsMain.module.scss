@@ -25,6 +25,11 @@ $category-size: 1.25em;
   }
 }
 
+.noProducts {
+  padding-top: 50px;
+  text-align: center;
+}
+
 @media screen and (min-width: $min-width-3) {
   .products {
     grid-template-columns: repeat($count-3, 1fr);

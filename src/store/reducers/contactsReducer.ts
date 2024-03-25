@@ -15,15 +15,20 @@ const initialValue: contactInterface = {
         {
             name: 'Избранное',
             router: Path.FAVOURITES
-        },{
-            name: 'Корзина',
-            router: Path.CART
-        },{
-            name: 'Контакты',
-            router: Path.CONTACTS
-        },{
+        },
+        {
             name: 'Условия сервиса',
             router: Path.TERMS_OF_SERVICE
+
+        },
+        {
+            name: 'Корзина',
+            router: Path.CART
+
+        },
+        {
+            name: 'Контакты',
+            router: Path.CONTACTS
         },
     ],
     contacts: 89005553535,
