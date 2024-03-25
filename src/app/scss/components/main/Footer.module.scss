@@ -1,0 +1,55 @@
+@import "@/app/scss/globals/color";
+@import "@/app/scss/globals/values";
+
+$route-gap: 20px;
+
+$language-gap: 20px;
+
+.page {
+  width: 100%;
+}
+
+.root {
+  padding: $default-padding;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: $route-gap;
+
+
+  border-radius: 30px 30px 0 0;
+}
+
+.header {
+  display: flex;
+  justify-self: start;
+}
+
+.pointsArr {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  column-gap: 50px;
+}
+
+.language_section {
+
+  display: flex;
+  align-self: end;
+  gap: $language-gap;
+
+  .activeLanguage {
+    color: $important-color;
+  }
+}
+
+.contactsArr {
+  display: flex;
+  gap: 20px;
+}
+
+.img {
+  width: 31px;
+  height: 31px;
+}

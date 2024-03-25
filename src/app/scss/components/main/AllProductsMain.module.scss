@@ -1,0 +1,33 @@
+@import "@/app/scss/globals/values";
+
+$category-size: 1.25em;
+
+.category_section {
+  padding-bottom: $products-gap;
+  display: flex;
+  flex-flow: column;
+
+  gap: $products-gap;
+
+  .category_name {
+    font-size: $category-size;
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $products-gap;
+  justify-content: center;
+
+  li {
+    min-width: 350px;
+  }
+}
+
+.noProducts {
+  padding-top: 50px;
+  text-align: center;
+}
+
+
