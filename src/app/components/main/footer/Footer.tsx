@@ -1,19 +1,20 @@
 import '@/app/scss/globals/globals.scss'
-import {ContactsInterface, FooterInterfaceProps} from "@/app/interfaces/footerInterface";
+import {ContactsInterface, FooterInterfaceProps, FooterVarious} from "@/app/interfaces/footerInterface";
 
 import footer_scss from '@/app/scss/components/main/Footer.module.scss'
 import Image from "next/image";
+import {Path} from "@/app/path";
 
 export const Footer = (props: FooterInterfaceProps) => {
     return (
         <section className={footer_scss.page}>
             <main className={footer_scss.root + ' round_section'}>
-                <div className={'title'}>{props.appName}</div>
+                <a className={'title'} href={Path.PRODUCTS}>{props.appName}</a>
                 <ul className={footer_scss.pointsArr}>
-                    {props.pointsApp.map((point: string, index) => {
+                    {props.pointsArr.map((point: FooterVarious, index) => {
                         return (
                             <li key={index}>
-                                <button>{point}</button>
+                                <a href={point.router}>{point.name}</a>
                             </li>
                         )
                     })}

@@ -16,17 +16,24 @@ body {
   font-weight: $title-weight;
 }
 
-button {
+button, a {
+  text-decoration: none;
+  height: min-content;
+
   margin: 0;
   padding: 0;
 
   cursor: pointer;
   background-color: $button-color;
+  color: $buy-color;
   border: none;
-
 
   font-size: $button-size;
   font-weight: $button-weight;
+}
+
+a {
+  font-weight: $a_weight;
 }
 
 ul, ol {

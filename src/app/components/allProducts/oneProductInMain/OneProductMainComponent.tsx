@@ -24,7 +24,7 @@ export const OneProductMainComponent = (props: OneProductMainComponentInterface)
                                width={0} height={0}/>
                         <div className={'no_important'}>{props.oneProduct.rate}</div>
                     </section>
-                    <button onClick={() => props.setIsPressedToCart(true)}>
+                    <button onClick={() => props.setIsPressedToCart(true)} className={one_product_scss.buy_button}>
                         {props.isInCartVisual ?
                             <div>В корзине</div> :
                             <div>Купить</div>

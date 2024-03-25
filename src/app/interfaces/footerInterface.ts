@@ -4,7 +4,7 @@ export interface FooterInterfaceState {
         contacts: number,
         rules: string,
         contactsArr: ContactsInterface[]
-        pointsApp: string[]
+        pointsArr: FooterVarious[]
     }
 
 
@@ -15,10 +15,15 @@ export interface FooterInterfaceProps {
     contacts: number,
     rules: string,
     contactsArr: ContactsInterface[]
-    pointsApp: string[]
+    pointsArr: FooterVarious[]
 }
 
 export interface ContactsInterface {
     img: string,
     link: string
+}
+
+export interface FooterVarious {
+    name: string,
+    router: string
 }

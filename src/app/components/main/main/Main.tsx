@@ -11,7 +11,6 @@ import {CartContainer} from "@/app/components/cart/cart/CartContainer";
 
 export const Main = () => {
     const pathname = usePathname()
-    console.log(Path.PRODUCTS)
 
     return (
         <main className={main_scss.page}>
