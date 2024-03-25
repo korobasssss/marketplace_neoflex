@@ -1,31 +1,33 @@
 @import "@/app/scss/globals/values";
 
+$category-size: 1.25em;
+
+.category_section {
+  padding-bottom: $products-gap;
+  display: flex;
+  flex-flow: column;
+
+  gap: $products-gap;
+
+  .category_name {
+    font-size: $category-size;
+  }
+}
+
 .products {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: $products-gap;
-  column-gap: $products-gap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $products-gap;
+  justify-content: center;
 
   li {
     min-width: 350px;
   }
 }
 
-@media screen and (min-width: $min-width-3) {
-  .products {
-    grid-template-columns: repeat($count-3, 1fr);
-  }
-}
-@media screen and (max-width : $min-width-3 - 1) {
-  .products {
-    grid-template-columns: repeat($count-2, 1fr);
-  }
-}
-@media screen and (max-width : $min-width-2 - 1) {
-  .products {
-    grid-template-columns: repeat($count-1, 1fr);
-  }
+.noProducts {
+  padding-top: 50px;
+  text-align: center;
 }
 
 

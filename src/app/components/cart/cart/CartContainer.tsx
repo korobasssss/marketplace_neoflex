@@ -4,13 +4,13 @@ import {Cart} from "@/app/components/cart/cart/Cart";
 
 const mapStateToProps = (state: CartInterfaceState) => {
     return {
-        products: state.cart.products,
+        productsCart: state.cart.productsCart,
         price: state.cart.price
     }
+
 }
 
 const mapDispatchToProps = {
-
 }
 
 export const CartContainer = connect(mapStateToProps, mapDispatchToProps)(Cart)

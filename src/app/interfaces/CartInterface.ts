@@ -4,18 +4,20 @@ export interface OneProductCartInterface {
     title: string,
     price: number,
     rate: number,
-    count: number
+    count: number,
+    category: string,
+    description: string
 }
 
 export interface CartInterfaceState {
     cart: {
-        products: OneProductCartInterface[],
+        productsCart: OneProductCartInterface[],
         price: number
     }
 }
 
 export interface CartInterface {
-    products: OneProductCartInterface[]
+    productsCart: OneProductCartInterface[]
     price: number
 }
 

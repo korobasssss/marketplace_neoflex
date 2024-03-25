@@ -4,9 +4,28 @@
 $price-size: 1.06em;
 $price-weight: 600;
 
+$button-size-hover: 1.15em;
+
 .root {
   display: grid;
   row-gap: 50px;
+
+  .more {
+    display: flex;
+    justify-self: start;
+    align-content: end;
+
+    font-size: $count-size;
+    font-weight: 400;
+
+    text-decoration: underline;
+  }
+
+  .likeIcon {
+    position: absolute;
+    display: flex;
+    justify-self: end;
+  }
 
   .image_section {
     display: flex;
@@ -24,28 +43,36 @@ $price-weight: 600;
     flex-flow: column;
     gap: 15px;
   }
+}
 
-  .section {
-    display: flex;
-    justify-content: space-between;
-  }
+.section {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .price {
-    font-size: $price-size;
-    font-weight: $price-weight;
+.price {
+  font-size: $price-size;
+  font-weight: $price-weight;
 
-    color: $important-color;
-  }
+  color: $important-color;
+}
 
-  .rate_section {
-    display: flex;
-    gap: 10px;
+.rate_section {
+  display: flex;
+  gap: 10px;
 
-    align-items: center;
-  }
+  align-items: center;
+}
 
-  .rate_icon {
-    width: 23px;
-  }
+.rate_icon {
+  width: 23px;
+}
 
+.buy_button {
+  transition: all 0.25s ease;
+}
+
+.buy_button:hover {
+  font-size: $button-size-hover;
+  transition: all 0.25s ease;
 }

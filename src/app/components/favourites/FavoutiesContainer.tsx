@@ -1,10 +1,11 @@
 import {connect} from "react-redux";
 import {AllProductsInterfaceState} from "@/app/interfaces/allProductsInterface";
 import {AllProducts} from "@/app/components/allProducts/AllProducts";
+import {FavouritesInterfaceState} from "@/app/interfaces/favouritesInterface";
 
-const mapStateToProps = (state: AllProductsInterfaceState) => {
+const mapStateToProps = (state: FavouritesInterfaceState) => {
     return {
-        products: state.products.products,
+        products: state.favourites.productsFav,
         categories: state.products.categories
     }
 }
@@ -13,4 +14,4 @@ const mapDispatchToProps = {
 
 }
 
-export const AllProductsContainer = connect(mapStateToProps, mapDispatchToProps)(AllProducts)
+export const FavouritesContainer = connect(mapStateToProps, mapDispatchToProps)(AllProducts)

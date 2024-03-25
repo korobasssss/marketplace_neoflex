@@ -1,6 +1,7 @@
 @import "@/app/scss/globals/color";
 
 .page {
+  overflow: hidden;
 
   display: grid;
   justify-items: center;
@@ -10,7 +11,7 @@
 
 .route {
   padding: 0 10px;
-  width: 1135px;
+  max-width: 1135px;
   min-height: 100vh;
 
   display: grid;
@@ -18,5 +19,13 @@
   gap: 30px;
   justify-self: center;
 
+}
 
+.scroll {
+  display: grid;
+  justify-items: center;
+
+  background-color: $bgc;
+
+  overflow: hidden;
 }

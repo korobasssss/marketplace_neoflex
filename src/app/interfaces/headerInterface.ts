@@ -3,11 +3,16 @@ export interface HeaderInterfaceState {
         appName: string
     }
     cart: {
-        countProducts: number
+        countProductsCart: number
+    },
+    favourites: {
+        countProductsFav: number
     }
 }
 
 export interface HeaderInterfaceProps {
     appName: string,
-    countProductsInCart: number
+    countProductsInCart: number,
+    countProductsInFav: number,
+
 }

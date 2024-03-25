@@ -16,17 +16,24 @@ body {
   font-weight: $title-weight;
 }
 
-button {
+button, a {
+  text-decoration: none;
+  height: min-content;
+
   margin: 0;
   padding: 0;
 
   cursor: pointer;
   background-color: $button-color;
+  color: $buy-color;
   border: none;
-
 
   font-size: $button-size;
   font-weight: $button-weight;
+}
+
+a {
+  font-weight: $a_weight;
 }
 
 ul, ol {
@@ -54,4 +61,32 @@ ul, ol {
   font-weight: $no-important-weight;
 
   color: $no-important-color
+}
+
+.dark {
+  cursor: pointer;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $buy-color;
+  opacity: 0.3;
+}
+
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d5d4d4;
+  border-radius: 5px;
 }

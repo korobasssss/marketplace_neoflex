@@ -8,16 +8,24 @@ import {usePathname} from "next/navigation";
 import {Path} from "@/app/path";
 import {AllProductsContainer} from "@/app/components/allProducts/AllProductsContainer";
 import {CartContainer} from "@/app/components/cart/cart/CartContainer";
+import {FavouritesContainer} from "@/app/components/favourites/FavoutiesContainer";
 
 export const Main = () => {
-    const pathname = usePathname()
-    console.log(Path.PRODUCTS)
+    const pathnameArr = usePathname().split('/')
+    if (pathnameArr.length > 2) {
+        pathnameArr.splice(3)
+    }
+    const pathname = pathnameArr.join('/')
+
+    console.log(pathname)
 
     return (
         <main className={main_scss.page}>
             <section className={main_scss.route}>
                 <HeaderContainer/>
-                {pathname === Path.PRODUCTS ? <AllProductsContainer/> : <CartContainer/>}
+                {pathname === Path.PRODUCTS ? <AllProductsContainer/> :
+                    pathname === Path.CART ? <CartContainer/> :
+                        pathname === Path.FAVOURITES ? <FavouritesContainer/> : null}
                 <FooterContainer/>
             </section>
         </main>

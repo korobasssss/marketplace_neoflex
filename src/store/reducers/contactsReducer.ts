@@ -1,8 +1,9 @@
-import {ContactsInterface} from "@/app/interfaces/footerInterface";
+import {ContactsInterface, FooterVarious} from "@/app/interfaces/footerInterface";
+import {Path} from "@/app/path";
 
 interface contactInterface {
     appName: string,
-    pointsApp: string[],
+    pointsArr: FooterVarious[],
     contacts: number,
     rules: string,
     contactsArr: ContactsInterface[]
@@ -10,7 +11,26 @@ interface contactInterface {
 
 const initialValue: contactInterface = {
     appName: 'QPICK',
-    pointsApp: ['Избранное', 'Корзина', 'Контакты', 'Условия сервиса'],
+    pointsArr: [
+        {
+            name: 'Избранное',
+            router: Path.FAVOURITES
+        },
+        {
+            name: 'Условия сервиса',
+            router: 'https://yandex.ru/legal/market_termsofuse'
+
+        },
+        {
+            name: 'Корзина',
+            router: Path.CART
+
+        },
+        {
+            name: 'Контакты',
+            router: 'tel:+1234567890'
+        },
+    ],
     contacts: 89005553535,
     rules: `Here is service's rules`,
     contactsArr: [

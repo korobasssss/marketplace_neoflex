@@ -20,14 +20,19 @@ $no-important-weight: 600;
 $button-size: 1.06em;
 $button-weight: 600;
 
-$min-width-3: 1135px;
+$a_weight: 400;
+
+$min-width-3: 1160px;
 $count-3: 3;
 
-$min-width-2: 750px;
+$min-width-2: 832px;
 $count-2: 2;
 
 $min-width-1: 350px;
 $count-1: 1;
+
+$z-index-main: 0;
+$z-index-modal: 1000;
 
 
 $column-count-in-footer-nav: 2;
