@@ -1,9 +1,9 @@
 import {OneProductMainComponent} from "@/app/components/allProducts/oneProductInMain/OneProductMainComponent";
 import {OneProductMainInterface} from "@/app/interfaces/oneProductInterface";
 import {useEffect, useState} from "react";
+import {OneProductInModalWindow} from "@/app/components/allProducts/oneProductInModalWindow/OneProductInModalWindow";
 
 export const OneProductMain = (props: OneProductMainInterface) => {
-
     const [isInCartVisual, setIsInCartVisual] = useState(false)
     const [isInFavVisual, setIsInFavVisual] = useState(false)
     const [isPressedToCart, setIsPressedToCart] = useState(false)
@@ -50,10 +50,17 @@ export const OneProductMain = (props: OneProductMainInterface) => {
         setIsPressedToFav(false)
     }, [isPressedToFav]);
 
-
-    return <OneProductMainComponent oneProduct={props.oneProduct}
-                                    isInCartVisual={isInCartVisual}
-                                    setIsPressedToCart={setIsPressedToCart}
-                                    setIsPressedToFav={setIsPressedToFav}
-                                    isInFavVisual={isInFavVisual}/>
+    if (props.flag) {
+        return <OneProductMainComponent oneProduct={props.oneProduct}
+                                        isInCartVisual={isInCartVisual}
+                                        setIsPressedToCart={setIsPressedToCart}
+                                        setIsPressedToFav={setIsPressedToFav}
+                                        isInFavVisual={isInFavVisual}/>
+    } else {
+        return <OneProductInModalWindow oneProduct={props.oneProduct}
+                                        isInCartVisual={isInCartVisual}
+                                        setIsPressedToCart={setIsPressedToCart}
+                                        setIsPressedToFav={setIsPressedToFav}
+                                        isInFavVisual={isInFavVisual}/>
+    }
 }

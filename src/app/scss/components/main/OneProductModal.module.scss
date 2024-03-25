@@ -1,0 +1,53 @@
+@import "@/app/scss/globals/values";
+
+$route-gap: 20px;
+
+$photo-size: 300px;
+
+$data-gap: 20px;
+
+$description-size: 400px;
+
+.page {
+  z-index: $z-index-modal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.root {
+  position: absolute;
+
+  display: flex;
+  gap: $route-gap;
+
+
+  .photo {
+    width: $photo-size;
+    height: auto;
+  }
+
+  .data {
+    display: flex;
+    flex-flow: column;
+    gap: $data-gap;
+  }
+
+  .description {
+    width: $description-size;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .price {
+    text-align: end;
+  }
+
+}

@@ -47,6 +47,8 @@ $language-gap: 20px;
 }
 
 .language_section {
+  z-index: $z-index-main;
+
   position: absolute;
   left: 54%;
 

@@ -7,3 +7,11 @@ export const Path = {
     CONTACTS: '/' + HEADER_PATH + '/contacts',
     TERMS_OF_SERVICE: '/' + HEADER_PATH + '/terms',
 }
+
+export const Main_path = {
+    PRODUCTS: 'products',
+    CART: 'cart',
+    FAVOURITES: 'favourites',
+    CONTACTS: 'contacts',
+    TERMS_OF_SERVICE: 'terms',
+}

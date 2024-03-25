@@ -5,7 +5,8 @@ export interface OneProductCartInterface {
     price: number,
     rate: number,
     count: number,
-    category: string
+    category: string,
+    description: string
 }
 
 export interface CartInterfaceState {

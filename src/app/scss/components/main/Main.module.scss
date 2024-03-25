@@ -1,6 +1,7 @@
 @import "@/app/scss/globals/color";
 
 .page {
+  overflow: hidden;
 
   display: grid;
   justify-items: center;
@@ -18,5 +19,13 @@
   gap: 30px;
   justify-self: center;
 
+}
 
+.scroll {
+  display: grid;
+  justify-items: center;
+
+  background-color: $bgc;
+
+  overflow: hidden;
 }

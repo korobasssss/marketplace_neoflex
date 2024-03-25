@@ -6,7 +6,8 @@ export interface OneProductInterface {
     title: string,
     price: number,
     rate: number,
-    category: string
+    category: string,
+    description: string
 }
 
 export interface OneProductState {
@@ -19,6 +20,8 @@ export interface OneProductState {
 }
 
 export interface OneProductMainInterface {
+    flag: boolean
+
     oneProduct: OneProductInterface
     cartProducts: OneProductCartInterface[]
     favProducts: OneProductCartInterface[]

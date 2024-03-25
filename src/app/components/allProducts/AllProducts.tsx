@@ -5,15 +5,20 @@ import main_scss from '@/app/scss/components/main/AllProductsMain.module.scss'
 import {OneProductMainContainer} from "@/app/components/allProducts/oneProductInMain/OneProductMainContainer";
 import '@/app/scss/globals/globals.scss'
 import {usePathname} from "next/navigation";
-import {Path} from "@/app/path";
+import {Main_path} from "@/app/path";
+import Cookies from 'js-cookie'
 
 export const AllProducts = (props: AllProductsInterfaceProps) => {
     const pathname = usePathname()
+    const pathnameArr = pathname.split('/')
+    const thirdPath = pathnameArr[2]
+    const lastPath = pathnameArr[pathnameArr.length - 1]
+
 
     return (
         <section>
             {props.products.length > 0 ?
-                pathname === Path.PRODUCTS ?
+                thirdPath === Main_path.PRODUCTS ?
                     <ul>
                         {props.categories.map((category: string, index) => {
                             return (
@@ -24,7 +29,8 @@ export const AllProducts = (props: AllProductsInterfaceProps) => {
                                             .map((oneProduct: OneProductInterface) => {
                                                 return (
                                                     <li key={oneProduct.id}>
-                                                        <OneProductMainContainer oneProduct={oneProduct}/>
+                                                        <OneProductMainContainer oneProduct={oneProduct}
+                                                                                 flag={true}/>
                                                     </li>
                                                 )
                                             })}
@@ -35,20 +41,32 @@ export const AllProducts = (props: AllProductsInterfaceProps) => {
                     </ul>
                     :
                     <ul className={main_scss.products}>
-                        {props.products.map((oneProduct: OneProductInterface) => {
-                                return (
-                                    <li key={oneProduct.id}>
-                                        <OneProductMainContainer oneProduct={oneProduct}/>
-                                    </li>
-                                )
-                            })}
+                        {props.products.map((oneProduct: OneProductInterface, index) => {
+                            return (
+                                <li key={oneProduct.id}>
+                                    <OneProductMainContainer oneProduct={oneProduct}
+                                                             flag={true}/>
+                                </li>
+                            )
+                        })}
                     </ul>
                 :
                 <div className={'no_important ' + main_scss.category_name + ' ' + main_scss.noProducts}>Нет
                     товаров</div>
             }
-        </section>
+            {lastPath === Cookies.get('id') ?
+                props.products.map((oneProduct: OneProductInterface, index) => {
+                    if (oneProduct.id.toString() === Cookies.get('id')) {
+                        return (
+                            <OneProductMainContainer key={oneProduct.id}
+                                                     oneProduct={props.products[index]}
+                                                     flag={false}/>
+                        )
+                    }
+                })
 
+                : null}
+        </section>
 
     )
 }
