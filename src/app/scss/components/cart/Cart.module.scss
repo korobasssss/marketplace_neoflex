@@ -75,4 +75,12 @@ $res_button-radius: 20px;
     }
   }
 }
+@media screen and (max-width : $min-width-3 - 1) {
+  .columns {
+    flex-wrap: wrap;
+    gap: $columns-gap;
+  }
+}
+
+
 

@@ -87,4 +87,15 @@ $minus-plus-size: 30px;
   }
 }
 
+@media screen and (max-width : $min-width-3 - 1) {
+  .root {
+  }
+}
+@media screen and (max-width : $min-width-2 - 1) {
+  .root {
+    width: 85%;
+  }
+}
+
+
 
