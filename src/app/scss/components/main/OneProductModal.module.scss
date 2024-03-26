@@ -49,5 +49,23 @@ $description-size: 400px;
   .price {
     text-align: end;
   }
-
 }
+
+@media screen and (max-width : $min-width-2 - 1) {
+  .root {
+    width: 80%;
+    flex-flow: column;
+
+    .photo {
+      width: $photo-size / 2;
+      height: auto;
+      display: flex;
+      align-self: center;
+    }
+
+    .description {
+      width: 100% ;
+    }
+  }
+}
+
