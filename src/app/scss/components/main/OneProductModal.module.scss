@@ -9,6 +9,7 @@ $data-gap: 20px;
 $description-size: 400px;
 
 .page {
+  overflow-y: auto;
   z-index: $z-index-modal;
   display: flex;
   justify-content: center;
@@ -26,8 +27,18 @@ $description-size: 400px;
   position: absolute;
 
   display: flex;
-  gap: $route-gap;
+  flex-flow: column;
 
+  .button_close {
+    display: flex;
+    width: min-content;
+    justify-self: end;
+  }
+
+  .section {
+    display: flex;
+    gap: $route-gap;
+  }
 
   .photo {
     width: $photo-size;
@@ -51,10 +62,11 @@ $description-size: 400px;
   }
 }
 
-@media screen and (max-width : $min-width-2 - 1) {
-  .root {
-    width: 80%;
+@media screen and (max-width: $min-width-2 - 1) {
+  .section {
+    width: 100%;
     flex-flow: column;
+
 
     .photo {
       width: $photo-size / 2;
@@ -62,9 +74,12 @@ $description-size: 400px;
       display: flex;
       align-self: center;
     }
+    .data {
+      width: 100%;
+    }
 
     .description {
-      width: 100% ;
+      width: 100%;
     }
   }
 }
