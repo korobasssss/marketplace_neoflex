@@ -9,4 +9,4 @@ Markeplace for Neoflex
 - React, Redux
 
 ---
-[Видео демонстрация работы приложения](https://youtu.be/97CW-EXRB2Y)
+[Видео демонстрация работы приложения](https://youtu.be/bJFhgwLR1zw)
